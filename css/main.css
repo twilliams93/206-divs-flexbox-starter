@@ -11,7 +11,7 @@
    ========================================================================== */
 
 html {
-    color: #222;
+    color: #f1f1f1;
     font-size: 1em;
     line-height: 1.4;
 }
@@ -42,7 +42,7 @@ hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #ff944d;
     margin: 1em 0;
     padding: 0;
 }
@@ -97,35 +97,43 @@ textarea {
 
 
 html {
-  background-color: #fff;
+  background-color: #f1f1f1;
   height: 100%;
+  width: 100%;
 }
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
+  font-weight:600;
   padding: 2em;
-  font-size: 1.25em;
+  color: #000;
   height: 100%;
 }
 
 .wrapper {
   /*add display:flex and set justify-content to space-between*/
   display: flex;
-  font-weight: 700;
+  flex-flow: row wrap;
   justify-content: space-between;
+  align-items: center;
+  
 }
 
 .div-1, .div-2, .div-3 {
   /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
-  align-items: center;
-  background-color: #f16059;
-  color: #fff;
   display:flex;
-  font-size: 1.6em;
-  height: 300px;
   justify-content: center;
+  align-items: center;
+  color: #000;
+  font-size: 1.25em;
   line-height: 1.5em;
-  width: 30%;
+  /**width: 30%;**/
+  height: auto;
+}
+
+.wrapper span{
+	font-family: 'Lora', sans-serif;
+	font-size: 1.3em;
 }
 
 
@@ -210,7 +218,16 @@ body {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+@media all and (min-width:1200px){
+	.div-1,.div-2,.div-3{
+		flex-basis: 30%;
+	}
 
+.div-1,.div-2{
+  border-right: 1px solid #555;
+  padding-right:30px;
+  }
+}
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
        (min-resolution: 1.25dppx),
